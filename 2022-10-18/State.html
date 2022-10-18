@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<body> -->
+<!-- <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<!-- <div id="root"></div>
+      <script>
+        const rootElement = document.getElementById("root");
+        
+        function draw() {
+          const number = Math.floor(random() * 9 + 1);
+          const element = `
+          <button>${number}</button>
+          `;
+          rootElement.innerHTML = element;
+        }
+
+        setInterval(draw, 1000);
+
+      </script>
+</body>
+
+</html> -->
+
+<!-- React -->
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <div id="root"></div>
+  <script type="text/babel">
+    const rootElement = document.getElementById("root");
+
+    // function Button({ number }) {
+    //   return <button style={backgroundColor :number %2 ===0? "pink":"green"}>1</button>
+    // }
+    const state = { name: "button", color: "pink" };
+
+    function Buttons() {
+      const [color, setColor] = React.useState("green");
+      const [name, setName] = React.useState("button");
+
+      return (
+        <button style={{ backgroundColor: color }}>
+          {color}
+          {name}
+        </button>
+      );
+    }
+
+    const Buttons = () => {
+      <>
+        <button style={{ backgroundColor: state.color }}>
+          {state.color + state.name}
+        </button>
+        <Button />
+      </>
+    }
+
+
+    ReactDOM.render(element, rootElement);
+  </script>
+</body>
+
+</html>

@@ -36,21 +36,23 @@
   <script type="text/babel">
     const rootElement = document.getElementById("root");
 
-    function draw() {
-      const number = Math.floor(random() * 9 + 1);
-      const element = (
-        <React.Fragment>
-          <button>{number}</button>
-          <div>
-            <p>{number}</p>
-          </div>
-        </React.Fragment>
-      )
-      ReactDOM.render(element, rootElement);
+    function Button({ number }) {
+      return <button style={backgroundColor :number %2 ===0? "pink":"green"}>1</button>
     }
 
-    setInterval(draw, 1000);
+    const Buttons = () => {
+      <>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <Button number={4} />
+      <Button number={5} />
+      <Button number={6} />
+      </>
+    };
 
+
+    ReactDOM.render(element, rootElement);
   </script>
 </body>
 

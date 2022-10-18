@@ -1,0 +1,59 @@
+<!-- HTML -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h1>Hello HTML</h1>
+  </body>
+</html> -->
+<!-- JAVASCRIPt -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <body>
+    <div id="root"><div>
+      <script>
+        const rootElement = document.getElementById("root");
+        const element = document.createElement("h1");
+        element.textContent = "Hello JavaScript";
+
+        rootElement.appendChild(element);
+      </script>
+  </body>
+</html> -->
+
+<!-- React -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <body>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <div id="root"><div>
+      <script>
+        const rootElement = document.getElementById("root");
+        const element = React.createElement("hi", {
+          children: "Hello React",
+        })
+
+        ReactDOM.render(element, rootElement);
+      </script>
+  </body>
+</html> -->
+
+<!-- JSX -->
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <div id="root"><div>
+      <script type = "text/babel">
+        const rootElement = document.getElementById("root");
+        const text = "hello JSX!"
+
+        const element = <h1>{text}</h1>;
+
+        ReactDOM.render(element, rootElement);
+      </script>
+  </body>
+</html>
